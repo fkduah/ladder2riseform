@@ -2,7 +2,7 @@ window.onload = function() {
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
- 
+setTimeout(() => {
     const tabLinks = Array.from(
       document.querySelector('[px-tabs="tabs-menu"]').children
     );
@@ -428,6 +428,6 @@ window.Webflow.push(() => {
         }
       });
     });
- 
+  }, 4000);
 });
 };
