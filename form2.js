@@ -1,5 +1,3 @@
-window.onload = function() {
-
 window.Webflow ||= [];
 window.Webflow.push(() => {
 setTimeout(() => {
@@ -430,4 +428,4 @@ setTimeout(() => {
     });
   }, 4000);
 });
-};
+
