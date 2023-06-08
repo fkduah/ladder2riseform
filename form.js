@@ -429,4 +429,49 @@ window.Webflow.push(() => {
   }, 4000);
   
   
+  
+  
+  
+  // Get the form element by its name
+var form = document.forms["Email Form"];
+
+// Add an event listener to the form element for the submit event
+form.addEventListener("submit", function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Run the code to create and store the new URL
+  // Get the input elements by their IDs
+  var dateInput = form.elements["Date"];
+  var hiddenInput = form.elements["hidden-input"];
+
+  // Get the element with ID "total" and remove the dollar sign from its inner text
+  var totalElement = document.getElementById("total");
+  var totalValue = totalElement.innerText.replace("$", "");
+
+  // Set the value of the hidden input to the total value
+  hiddenInput.value = totalValue;
+
+  // Create a base URL with the query string parameter for publictoken
+  var baseURL = "https://assurant-storefront-uat.azurewebsites.net/?publictoken=NEWHAVEN";
+
+  // Create a new URL object with the base URL
+  var newURL = new URL(baseURL);
+
+  // Append the query string parameters for date and amount using the values from the input elements
+  newURL.searchParams.append("date", dateInput.value);
+  newURL.searchParams.append("amount", hiddenInput.value);
+
+  // Store the new URL as a global variable
+  window.newURL = newURL;
+
+  // Console log the new URL
+  console.log(newURL);
+});
+  
+  
+  
+  
+  
+  
 });
