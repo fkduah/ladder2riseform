@@ -427,4 +427,56 @@ window.Webflow.push(() => {
       });
     });
   }, 4000);
+  
+  
+  
+  // Define global variables to store the form values and the URL
+var formValues;
+var url;
+
+// Define the submitForm function
+function submitForm() {
+  // Get the value of amount which is the hidden input
+  // Get the element by ID
+  var element = document.getElementById ("total");
+  // Get the inner text and remove the $
+  var text = element.innerText.replace ("$", "");
+  // Get the hidden input by ID
+  var hidden = document.getElementById ("hidden-input");
+  // Set the hidden input's value to the text
+  hidden.value = text;
+
+  // Create a URL from the inputs
+
+  // Get the form element by ID
+
+  var form = document.getElementById ("flowbaseSlider");
+  // Get the URL to append the query string to
+  url = "https://assurant-storefront-uat.azurewebsites.net/?publictoken=NEWHAVEN";
+  // Create a new URLSearchParams object
+  var params = new URLSearchParams ();
+  // Loop through the form inputs and append their names and values to the params object
+  for (var input of form.elements) {
+    // Only append inputs that have the name dob or amount and a value
+    if ((input.name === "Date" || input.name === "amount") && input.value) {
+      params.append (input.name, input.value);
+    }
+  }
+  // Add the params object to the URL as a query string
+  url += "?" + params.toString ();
+
+  // Store the form values in a global variable
+  formValues = params;
+}
+
+// Define a function to handle the checkout button click
+function checkout() {
+  // Redirect to the new URL
+  window.location.href = url;
+}
+
+// Get the checkout button element by ID
+var button = document.getElementById ("checkout");
+// Add a click event listener that calls the checkout function
+button.addEventListener ("click", checkout);
 });
