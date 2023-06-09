@@ -426,13 +426,8 @@ window.Webflow.push(() => {
         }
       });
     });
-  }, 4000);
-  
-
-  
-  
-  
-     // Access a form with then name and ID of 'flowbaseSlider' and name of 'Email Form'
+    
+        // Access a form with then name and ID of 'flowbaseSlider' and name of 'Email Form'
   var form = document.getElementById("flowbaseSlider");
 
   // Get the value of an input with the ID and Name 'Date' and the value of an input the ID and name 'hidden-amount' and store them in the window object
@@ -464,10 +459,7 @@ window.Webflow.push(() => {
   console.log(window.dateValue);
   console.log(window.hiddenAmountValue);
   console.log(window.amountURL);
-
+    //end
+  }, 4000);
    
-  
-  
-  
-  
 });
