@@ -465,7 +465,7 @@ window.Webflow.push(() => {
   console.log(window.hiddenAmountValue);
   console.log(window.amountURL);
 
-    });
+   
   
   
   
