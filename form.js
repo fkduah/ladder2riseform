@@ -426,40 +426,5 @@ window.Webflow.push(() => {
         }
       });
     });
-    
-        // Access a form with then name and ID of 'flowbaseSlider' and name of 'Email Form'
-  var form = document.getElementById("flowbaseSlider");
-
-  // Get the value of an input with the ID and Name 'Date' and the value of an input the ID and name 'hidden-amount' and store them in the window object
-  var dateInput = form.elements["dateTest"];
-  var hiddenAmountInput = form.elements["hidden-amount"];
-  window.dateValue = dateInput.value;
-  window.hiddenAmountValue = hiddenAmountInput.value;
-
-  // When the form submits the values from the input will append a url string 'https://assurant-storefront-uat.azurewebsites.net/?publictoken=NEWHAVEN' where dob will be equal to the value of the variable that held Date and amount will be equal to the variable that is holds hidden-amount.  The newly created URL will be on the window object as amountURL 
-  form.addEventListener("submit", function(event) {
-    // Prevent the default form submission behavior
-    event.preventDefault();
-
-    // Create a base URL with the query string parameter for publictoken
-    var baseURL = "https://assurant-storefront-uat.azurewebsites.net/?publictoken=NEWHAVEN";
-
-    // Create a new URL object with the base URL
-    var newURL = new URL(baseURL);
-
-    // Append the query string parameters for dob and amount using the values from the window object
-    newURL.searchParams.append("dob", window.dateValue);
-    newURL.searchParams.append("amount", window.hiddenAmountValue);
-
-    // Store the new URL as a global variable
-    window.amountURL = newURL;
-  });
-
-  //the three variables. Two for the input and the new url with the query paramaters will be console logged when the user submits the form.
-  console.log(window.dateValue);
-  console.log(window.hiddenAmountValue);
-  console.log(window.amountURL);
-    //end
-  }, 4000);
-   
+  }, 4000);   
 });
