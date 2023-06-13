@@ -299,7 +299,7 @@ window.Webflow.push(() => {
       allTotals[allTotals.length - 1].innerHTML = priceTotalHTML.innerHTML;
     };
     
-    console.log(allTotals[allTotals.length - 1].innerHTML = priceTotalHTML.innerHTM);
+    console.log(allTotals[allTotals.length - 1].innerHTML = priceTotalHTML.innerHTML);
 
     let priceRows = document.querySelector('[price-card="rows"]');
     priceRows.firstChild.remove();
