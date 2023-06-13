@@ -277,6 +277,8 @@ window.Webflow.push(() => {
 
       const hst = 0.14 * price;
       price += hst;
+      
+      console.log(price);
 
       priceTotalHTML = document.querySelector('[price-card="total"]');
       priceTotalHTML.innerHTML = price.toLocaleString("en-US", {
