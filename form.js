@@ -181,7 +181,7 @@ window.Webflow.push(() => {
         submit.classList.add("arrow-btn");
         submit.classList.add("is-dark");
         submit.classList.add("w-inline-block");
-        submit.classList.add("is-disabled");
+        submit.classList.add("is-disabled"); 
         submit.innerHTML = "Go To Cart";
 
         const pxTabsAttr = document.createAttribute("px-tabs");
