@@ -182,7 +182,7 @@ window.Webflow.push(() => {
         submit.classList.add("is-dark");
         submit.classList.add("w-inline-block");
         submit.classList.add("is-disabled");
-        submit.innerHTML = "Submit";
+        submit.innerHTML = "Go To Chart";
 
         const pxTabsAttr = document.createAttribute("px-tabs");
         pxTabsAttr.value = "btn-next";
