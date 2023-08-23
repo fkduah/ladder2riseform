@@ -275,7 +275,7 @@ window.Webflow.push(() => {
         price += card.price;
       });
 
-      const hst = 0.14 * price;
+      const hst = 0.13 * price;
       price += hst;
       
    
